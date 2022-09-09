@@ -29,12 +29,17 @@ public class Rectangle {
         return width*lenght;
     }
 
+    // Costractor
+    public Rectangle(double w, double l){
+        width = w;
+        lenght = l;
+    }
+
     public static void main(String[] args) {
-        Rectangle r1 = new Rectangle();
-        r1.setWidth(5);
-        System.out.println("Width is " + r1.getWidth());
-        Rectangle r2 = new Rectangle();
-        r2.setWidth(25);
+        Rectangle r1 = new Rectangle(20,40); // BUILD THE OBJECT (use new)
+        System.out.println("Rectangle one is " + r1.getWidth() + " " + r1.getLenght());
+        Rectangle r2 = new Rectangle(50,25);
+        System.out.println("Rectangle two is " + r2.getWidth() + " " + r2.getLenght());
 
     }
 }
