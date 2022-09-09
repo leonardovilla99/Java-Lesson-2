@@ -14,9 +14,9 @@ public class Rectangle {
     }
 
     // Mutators (to overide the value)
-    public void setWidth(double w){
-        if(w>=0.0){
-            width = w;
+    public void setWidth(double width){
+        if(width>=0.0){
+            this.width = width; // use this to use the class variable and no local
         }
     }
     public void setLenght(double l){
@@ -30,7 +30,15 @@ public class Rectangle {
     }
 
     // Costractor
-    public Rectangle(double w, double l){
+    public Rectangle(double w, double l){ // Signature = Rectangle double double
+        width = w;
+        lenght = l;
+    }
+    public Rectangle(){ // NO ARGUMENT COSTRACTOR
+        width = 0.0;
+        lenght = 0.0;
+    }
+    public Rectangle(int w, double l){ // Signature = Rectangle int double
         width = w;
         lenght = l;
     }
