@@ -3,7 +3,7 @@
  */
 public class Rectangle {
 
-    double width,lenght;
+    public double width,lenght;
 
     // Accessor (to access value)
     public double getWidth(){
@@ -15,10 +15,14 @@ public class Rectangle {
 
     // Mutators (to overide the value)
     public void setWidth(double w){
-        width = w;
+        if(w>=0.0){
+            width = w;
+        }
     }
     public void setLenght(double l){
-        lenght = l;
+        if(l>=0.0){
+            lenght = l;
+        }
     }
 
     public double getArea(){
@@ -29,5 +33,8 @@ public class Rectangle {
         Rectangle r1 = new Rectangle();
         r1.setWidth(5);
         System.out.println("Width is " + r1.getWidth());
+        Rectangle r2 = new Rectangle();
+        r2.setWidth(25);
+
     }
 }
